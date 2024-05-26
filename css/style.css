@@ -1,0 +1,130 @@
+/* start gloobal rouls */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end gloobal rouls */
+/* start header  */
+header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .container .link {
+    position: relative;
+}
+
+.header .container .logo {
+    width: 60px;
+}
+
+.header .container .link .icon {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 30px;
+}
+
+.header .container .link .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+    transition: .3s;
+}
+
+.header .link .icon span:first-child {
+    width: 100%;
+}
+
+.header .link .icon span:nth-child(2) {
+    width: 60%;
+    transition: .3s;
+
+}
+
+.header .link .icon span:last-child {
+    width: 100%;
+}
+
+.header .container .link:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .container .link ul {
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    list-style: none;
+    top: calc(100% + 15px);
+    min-width: 200px;
+    display: none;
+}
+
+.header .container .link ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent bisque transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    display: block;
+}
+
+.header .container .link ul li a {
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: .3s;
+}
+
+.header .container .link:hover ul {
+    display: block;
+}
+
+.header .container .link:hover ul li a:hover {
+    padding-left: 10px;
+}
+
+.header .container .link ul li:not(:last-child) {
+    border-bottom: solid 1px black;
+}
+
+/* end header  */
+/* start landing */
+
+/* end landing */
