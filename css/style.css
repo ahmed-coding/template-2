@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: 'Work Sans', sans-serif;
-    /* background-color: var(--main-color); */
+    background-color: var(--main-color);
 }
 
 ul {
@@ -51,7 +51,9 @@ ul {
 
 /* end gloobal rouls */
 /* start header  */
+header {}
 
+header {}
 
 /* end header  */
 /* start landing */
