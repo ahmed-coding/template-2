@@ -20,7 +20,7 @@ html {
 
 body {
     font-family: 'Work Sans', sans-serif;
-    background-color: var(--main-color);
+    background-color: black
 }
 
 ul {
@@ -64,6 +64,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    min-height: 97px;
 }
 
 header .container::after {
@@ -87,20 +88,69 @@ header nav {
     justify-content: flex-end;
 }
 
+header nav .toggle-menu {
+    color: white;
+    font-size: 22px;
+
+}
+
+@media (min-width: 768px) {
+    header nav .toggle-menu {
+        display: none;
+    }
+}
+
 header nav ul {
     display: flex;
 }
 
+@media (max-width: 767px) {
+    header nav ul {
+        display: none;
+    }
+
+    header nav .toggle-menu:hover+ul {
+        display: flex;
+    }
+}
+
+
 header nav ul li a {
     padding: 40px 10px;
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
-
+    position: relative;
+    z-index: 2;
 
 }
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+
+}
+
+header nav .form {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+
+header nav .form i {
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
 
 /* end header  */
 /* start landing */
